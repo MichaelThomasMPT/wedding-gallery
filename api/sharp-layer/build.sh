@@ -1,6 +1,6 @@
 #!/bin/bash
 set +x
-IMAGE=sharp-0.30.7-node-16
+IMAGE=sharp-0.33.5-node-16
 BUILD_DIR=$(pwd)/build
 rm -rf "${BUILD_DIR}" && mkdir -p "${BUILD_DIR}"
 cat Dockerfile | docker build -t "${IMAGE}" -

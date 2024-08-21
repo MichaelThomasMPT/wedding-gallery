@@ -45,7 +45,7 @@ module.exports.handler = async event => {
   );
 
   const body = await readStream(object.Body);
-  const photo = sharp(body);
+  const photo = sharp(body, { failOnError: false });
   const metadata = await photo.metadata();
 
   const { name } = path.parse(key);
@@ -70,7 +70,7 @@ module.exports.handler = async event => {
           })
         )
       ),
-
+    
     photo
       .rotate()
       .resize(Math.min(1080, metadata.width))

@@ -7,7 +7,7 @@ provider:
   stage: prod
 
 layers:
-  sharp-0_30_7-node-16:
+  sharp-0_33_5-node-16:
     path: build
     compatibleRuntimes:
       - nodejs16.x
