@@ -3,14 +3,14 @@ frameworkVersion: '3'
 
 provider:
   name: aws
-  region: eu-west-1
+  region: ap-southeast-2
   stage: prod
 
 layers:
-  sharp-0_33_5-node-16:
+  sharp-0_33_5-node-20:
     path: build
     compatibleRuntimes:
-      - nodejs16.x
+      - nodejs20.x
     compatibleArchitectures:
       - x86_64
     allowedAccounts:

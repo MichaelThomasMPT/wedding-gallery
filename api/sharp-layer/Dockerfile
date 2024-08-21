@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/nodejs:16
+FROM public.ecr.aws/lambda/nodejs:20
 
 ENV WEBP_VERSION=1.2.4
 ENV LIBDE265_VERSION=1.0.8
