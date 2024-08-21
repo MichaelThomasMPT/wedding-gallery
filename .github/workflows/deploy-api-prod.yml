@@ -7,9 +7,13 @@ on:
     paths:
       - 'api/**'
       - Makefile
-      - .github/workflows/deploy-api.yml
+      - .github/workflows/deploy-api-prod.yml
 
-concurrency: deploy-api
+permissions:
+      id-token: write
+      contents: read
+
+concurrency: deploy-api-prod
 
 jobs:
   deploy-prod:

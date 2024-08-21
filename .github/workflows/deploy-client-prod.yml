@@ -7,9 +7,13 @@ on:
     paths:
       - 'client/**'
       - Makefile
-      - .github/workflows/deploy-client.yml
+      - .github/workflows/deploy-client-prod.yml
 
-concurrency: deploy-client
+permissions:
+      id-token: write
+      contents: read
+
+concurrency: deploy-client-prod
 
 jobs:
   deploy-prod:
